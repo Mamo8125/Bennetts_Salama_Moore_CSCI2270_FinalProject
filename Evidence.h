@@ -4,7 +4,7 @@
 struct MovieNode{
     int ranking;
     std::string title;
-    int year;
+    int caseNum;
     int quantity;
     MovieNode *parent;
     MovieNode *leftChild;
@@ -12,11 +12,11 @@ struct MovieNode{
 
     MovieNode(){};
 
-    MovieNode(int in_ranking, std::string in_title, int in_year, int in_quantity)
+    MovieNode(int in_ranking, std::string in_title, int in_caseNum, int in_quantity)
     {
         ranking = in_ranking;
         title = in_title;
-        year = in_year;
+        caseNum = in_caseNum;
         quantity = in_quantity;
         parent = NULL;
         leftChild = NULL;
@@ -34,7 +34,7 @@ class MovieTree
         void printMovieInventory();
         int countMovieNodes();
         void deleteMovieNode(std::string title);
-        void addMovieNode(int ranking, std::string title, int releaseYear, int quantity);
+        void addMovieNode(int ranking, std::string title, int caseNum, int quantity);
         void findMovie(std::string title);
         void rentMovie(std::string title);
 
